@@ -84,7 +84,7 @@
 
         body {
             background: #000000ea;
-            padding: 0;
+            padding: 0 0 50px 0;
             margin: 0;
             min-width: 1100px;
             scrollbar-color: red red;
@@ -145,6 +145,7 @@
             width: 540px;
             height: 720px;
             margin: -35px 0 0 -20px;
+            z-index: 1000;
         }
 
         section .content p {
@@ -273,6 +274,54 @@
             90% { transform: translate(10%,5%) }
             100% { transform: translate(5%,0) }
         }
+
+        .img-section {
+            background: transparent;
+            height: 350px;
+        }
+        .img-content {
+            background: transparent;
+        }
+        .img-submission {
+            z-index: 0;
+            position: absolute;
+            border-radius: 20px;
+            top: 44px;
+            left: -4px;
+            width: 503px;
+            height: 290px;
+        }
+
+        .img-barbedwire {
+            z-index: 100;
+            position: absolute;
+            width: 321px;
+            height: 553px;
+            transform: rotate(90deg);
+            top: -88px;
+            left: 87px;
+        }
+        .img-section-vertical {
+            background: transparent;
+            height: 683px;
+        }
+        .img-sectio-verticaln .img-content {
+            height: 720px;
+        }
+        .img-section-vertical .img-content .img-barbedwire {
+            transform: none;
+            top: 0;
+            width: 500px;
+            height: auto;
+            left: 0;
+        }
+        .img-section-vertical .img-content .img-submission {
+            transform: none;
+            width: 435px;
+            height: 631px;
+            top: 21px;
+            left: 35px;
+        }
     </style>
     <script type="application/javascript">
         if (document.readyState !== 'loading') {
@@ -319,7 +368,24 @@
             webamp.renderWhenReady(document.getElementById('llama')).then(function() {
                 // webamp.play(); // :(
             });
+
+            // Make it rain blood
+            for(var i = 0; i < Math.ceil(window.innerWidth / 100); i++) {
+                var drop = document.createElement('div');
+                var delay = getRandomInt(1500)
+                drop.className = "drop";
+                drop.style.marginLeft = getRandomInt(window.innerWidth) + 'px';
+                drop.style.animationDelay = delay + 'ms';
+                drop.style.mozAnimationDelay = delay + 'ms';
+                drop.style.webkitAnimationDelay = delay + 'ms';
+                window.document.body.appendChild(drop);
+            }
         }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
     </script>
     <title>Existential Bread</title>
 </head>
@@ -327,28 +393,68 @@
 <body>
     <div class="bg"></div>
     <div id="llama"></div>
-    <div class="drop"></div>
-    <div class="drop drop2"></div>
-    <div class="drop drop3"></div>
-    <div class="drop drop4"></div>
-    <div class="drop drop5"></div>
-    <div class="drop drop6"></div>
-    <div class="drop drop7"></div>
+
     <header>
         <img src="assets/banner.png" alt="banner"/>
     </header>
-    <section id="intro">
-        <div class="content">
-            <p>
-                stuff
-            </p>
+    <section class="img-section">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/368516712_866610778157900_3935608802126972117_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
         </div>
     </section>
-    <section>
-        <div class="content">
-            <p>
-                stuff
-            </p>
+    <section class="img-section-vertical">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/370072515_3488234538153631_9089283953704020249_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section-vertical">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/370244282_802294108361902_8638705652818598596_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/386473807_212008898455638_2170951759968937208_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section-vertical">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/387521039_766497321949029_5139228120101946325_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section-vertical">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/387542343_854822026026572_1403727558749947184_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/387561924_286528907526716_8282094486781679501_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section-vertical">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/393094540_1398153381134589_4803640592234342291_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/393143738_273484262325785_105166847565512639_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
+        </div>
+    </section>
+    <section class="img-section">
+        <div class="img-content" >
+            <img class="img-submission" src="assets/Contributers/IanMaile/393182104_283599831247514_2953487973926683087_n.jpeg">
+            <img class="img-barbedwire" src="assets/barbedwire.png">
         </div>
     </section>
 </body>
